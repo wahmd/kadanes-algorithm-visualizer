@@ -1,7 +1,12 @@
 .array {
     margin-top: 2rem;
+    margin-bottom: 3rem;
 } 
 
 .values-array {
+    display: flex;
+    justify-content: center;
     margin-top: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
 }

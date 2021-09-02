@@ -1,3 +1,21 @@
 body {
     margin: 0;
 }
+
+.current {
+    font-size:1.5rem;
+}
+
+.section-2{
+    display:flex;
+    .code {
+        flex: 2
+    }
+    .display {
+        padding: 1rem;
+        background-color: blueviolet;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        flex: 1;
+    }
+}

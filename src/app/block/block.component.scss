@@ -1,4 +1,6 @@
-
+body{ 
+    color: white;
+}
 
 .block {
     background-color: white;
@@ -17,7 +19,17 @@
 }
 
 .value {
-    margin: 0 .1rem;
-    border: solid 2px #ff1904;
+    flex: 50%;
+    border: solid 2.5px #d64e4b;
+    background: #ab4543;
+    margin: 0 .05rem;
     font-size: 17px;
+    color: white;
+}
+
+.active {
+    border: solid 2.5px #05d7e4;
+    background: #10a8b2;
+    font-size: 20px;
+    padding: 1.3rem;
 }

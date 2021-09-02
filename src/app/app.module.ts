@@ -10,6 +10,7 @@ import { BlockComponent } from './block/block.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { DisplayPanelComponent } from './display-panel/display-panel.component';
 
 
 
@@ -20,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
     ArrayEditorComponent,
     ArrayComponent,
     BlockComponent,
+    DisplayPanelComponent,
   ],
   imports: [
     BrowserModule,
