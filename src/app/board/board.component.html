@@ -1,3 +1,6 @@
-<!-- <button mat-button color="primary">Primary</button> -->
-<app-array></app-array>
+
+<button mat-raised-button color="primary" (click)="populateRandomArray()">generate random</button>
+
+<app-array *ngIf="array" [array]="array"></app-array>
+
 

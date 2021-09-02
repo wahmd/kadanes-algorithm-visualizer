@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-array',
@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./array.component.scss']
 })
 export class ArrayComponent implements OnInit {
-
-  array: number[] = [1,-2,4,6,2,-1,10];
+  @Input() array: number[] | undefined;
   constructor() { }
 
   ngOnInit(): void {
