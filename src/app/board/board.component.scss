@@ -2,20 +2,43 @@ body {
     margin: 0;
 }
 
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.line {
+    margin: .5rem 0;
+    font-size: 1rem;
+    font-weight: 100;
+}
 .current {
+    border-radius: .5rem;;
+    padding: .5rem;
+    background-color: black;
+    // background-color: black;
+    font-weight: 500;
     font-size:1.5rem;
+    color: yellow;
 }
 
 .section-2{
     display:flex;
     .code {
-        flex: 2
+        flex: 2;
+        background: #2669e7;
+        padding: 2rem;
+        border-radius: 1.5rem;
     }
     .display {
+        margin-left: 1rem;
         padding: 1rem;
         background-color: blueviolet;
-        border-top-left-radius: 2rem;
-        border-bottom-left-radius: 2rem;
+        border-radius: 2rem;
         flex: 1;
     }
+}
+
+.indent{
+    margin-left: 1.5rem;
 }

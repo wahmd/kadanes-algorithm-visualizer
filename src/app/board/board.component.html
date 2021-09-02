@@ -4,20 +4,22 @@
 <app-array *ngIf="array" [array]="array"></app-array>
 
 
-<div class="section-2">
+
+<button *ngIf="current<8" mat-raised-button color="warn" (click)="increment()">next</button>
+<button *ngIf="current>=8" mat-raised-button disabled color="warn" (click)="increment()">next</button>
+
+<div class="section-2 container">
     <div class="code">
-        <div [ngClass]="{current: current === 1}" [innerHTML]="'maximumCurrent = nums[0]'"></div>
-        <div [ngClass]="{current: current === 2}" [innerHTML]="'maximumGlobal = nums[0]'"></div>
-        <div [ngClass]="{current: current === 3}" [innerHTML]="'for i equals 1 to i less than nums length do'"></div>
-        <div [ngClass]="{current: current === 4}" [innerHTML]="'maxCurrent = Maximum between nums[i] And maximumCurrent + nums[i]'"></div>
-        <div [ngClass]="{current: current === 5}" [innerHTML]="'if maximumCurrent > maximumGlobal) {'"></div>
-        <div [ngClass]="{current: current === 6}" [innerHTML]="'maximumGlobal = maximumCurrent'"></div>
-        <div [ngClass]="{current: current === 7}" [innerHTML]="'return maxGlobal'"></div>
+        <div [ngClass]="{current: current === 1}" class="line" [innerHTML]="'maximumCurrent = nums[0]'"></div>
+        <div [ngClass]="{current: current === 2}" class="line" [innerHTML]="'maximumGlobal = nums[0]'"></div>
+        <div [ngClass]="{current: current === 3}" class="line" [innerHTML]="'for i equals 1 to i less than nums length do'"></div>
+        <div class="indent">
+            <div [ngClass]="{current: current === 4}" class="line" [innerHTML]="'maxCurrent = Maximum between nums[i] And maximumCurrent + nums[i]'"></div>
+            <div [ngClass]="{current: current === 5}" class="line" [innerHTML]="'if maximumCurrent is less maximumGlobal '"></div>
+            <div [ngClass]="{current: current === 6}" class="line indent" [innerHTML]="'maximumGlobal = maximumCurrent'"></div>
+        </div>
+  
+        <div [ngClass]="{current: current === 7}" class="line" [innerHTML]="'return maxGlobal'"></div>
     </div>
     <app-display-panel class="display" [maxCurrent]="maxCurrent" [maxGlobal]="maxGlobal"></app-display-panel>
 </div>
-
-
-
-<button mat-raised-button color="warn" (click)="decrement()">prev</button>
-<button mat-raised-button color="warn" (click)="increment()">next</button>

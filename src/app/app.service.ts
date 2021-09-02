@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class AppService {
-  private i: BehaviorSubject<number> = new BehaviorSubject(0);
+  private i: BehaviorSubject<number> = new BehaviorSubject(-1);
   constructor() {}
 
   getI = () => this.i;

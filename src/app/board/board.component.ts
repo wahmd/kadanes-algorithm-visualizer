@@ -31,7 +31,7 @@ export class BoardComponent implements OnInit {
   populateRandomArray = () => {
     this.reset();
     this.array = [];
-    const len = Math.floor(Math.random() * (20 - 2) + 2);
+    const len = Math.floor(Math.random() * (20 - 5) + 5);
     let i = len;
     do {
       this.array.push(Math.floor(Math.random() * (30 - -30) + -30));
@@ -41,23 +41,16 @@ export class BoardComponent implements OnInit {
 
   increment = () => {
     this.generator.next();
-    
   };
 
   increaseCurrentLine = () => {
-    if (this.current < this.lines) {
+    if (this.current <= this.lines) {
       this.current++;
     }
   }
 
-
-  decrement = () => {
-    if (this.current > 0) {
-      this.current--;
-    }
-  };
-
   *executeLine(nums: number[]) {
+    this.appService.setI(0);
     this.increaseCurrentLine();
     yield;
     this.increaseCurrentLine();
@@ -88,6 +81,7 @@ export class BoardComponent implements OnInit {
     this.increaseCurrentLine();
     yield;
     this.increaseCurrentLine();
+    this.appService.setI(-1);
     return this.maxGlobal;
   }
 }

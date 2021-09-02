@@ -14,7 +14,6 @@ export class BlockComponent implements OnInit {
   ngOnInit(): void {
     
     this.appService.getI().subscribe((value) => {
-      console.log(this.active);
       this.active = value;
     });
   }
