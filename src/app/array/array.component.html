@@ -1,0 +1,12 @@
+<div class="array">
+    <div>
+        <span *ngFor="let val of array; let i=index">
+            <app-block [index]="i"></app-block>
+        </span>
+    </div>
+    <div class="values-array">
+        <span *ngFor="let val of array; let i=index">
+            <app-block [value]="val" ></app-block>
+        </span>
+    </div>
+</div>

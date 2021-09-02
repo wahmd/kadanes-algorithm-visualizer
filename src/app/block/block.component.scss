@@ -1,0 +1,23 @@
+
+
+.block {
+    background-color: white;
+    padding: 1rem;
+    border: solid 10px rgb(31, 0, 80); 
+}
+
+
+.inline { 
+    display: inline;
+}
+
+.index { 
+    margin: 0 .1rem;
+    font-size: 17px;
+}
+
+.value {
+    margin: 0 .1rem;
+    border: solid 2px #ff1904;
+    font-size: 17px;
+}

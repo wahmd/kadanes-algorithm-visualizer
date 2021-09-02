@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-kadanealgovisualizer-dev-121101-authRole",
+      "UnauthRoleArn": "arn:aws:iam::243587989707:role/amplify-kadanealgovisualizer-dev-121101-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::243587989707:role/amplify-kadanealgovisualizer-dev-121101-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-kadanealgovisualizer-dev-121101-deployment",
+      "UnauthRoleName": "amplify-kadanealgovisualizer-dev-121101-unauthRole",
+      "StackName": "amplify-kadanealgovisualizer-dev-121101",
+      "StackId": "arn:aws:cloudformation:us-east-1:243587989707:stack/amplify-kadanealgovisualizer-dev-121101/c887dac0-0af3-11ec-b489-12c2b22562f7",
+      "AmplifyAppId": "dmlbqbb1zygh6"
+    }
+  }
+}
