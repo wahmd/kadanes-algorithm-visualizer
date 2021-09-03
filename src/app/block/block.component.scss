@@ -19,17 +19,26 @@ body{
 }
 
 .value {
+    user-select: none; 
     flex: 50%;
-    border: solid 2.5px #d64e4b;
+    border: solid 4px #d64e4b;
     background: #ab4543;
     margin: 0 .05rem;
     font-size: 25px;
+    padding: 2rem;
     color: white;
+    transition: padding .4s;
+}
+.value:hover {
+    font-size: 30px;
+    padding: 4rem;
+    cursor: pointer;
 }
 
+
 .active {
-    border: solid 2.5px #05d7e4;
+    border: solid 4px #00f2ff;
     background: #10a8b2;
     font-size: 27px;
-    padding: 1.3rem;
+    padding: 2.5rem;
 }

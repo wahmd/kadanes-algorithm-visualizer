@@ -11,8 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { DisplayPanelComponent } from './display-panel/display-panel.component';
-
-
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,8 @@ import { DisplayPanelComponent } from './display-panel/display-panel.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
+    MatTooltipModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

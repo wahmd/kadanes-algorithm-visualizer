@@ -1,2 +1,17 @@
-<h2>maxCurrent: {{maxCurrent}}</h2>
-<h2>maxGlobal: {{maxGlobal}}</h2>
+<div class="">
+    <h2 class="box" >Maximum Current <div class="number">{{maxCurrent}}</div></h2>
+    <h2 [ngClass]="{celebrate: !nextBtn && !autoBtn}" class="box">Maximum Global <div class="number">{{maxGlobal}}</div></h2>
+</div>
+
+<mat-slider min="1" max="2000" step="100" [value]="speed" (input)="emitSpeedUpdate($event)" ></mat-slider>
+<div class="buttons">
+    <button *ngIf="nextBtn" mat-raised-button class="button" color="warn" (click)="emitNextClicked()">Next</button>
+    <button *ngIf="!nextBtn" mat-raised-button class="button" disabled color="warn">Next</button>
+    
+    <button *ngIf="autoBtn" mat-raised-button class="button" color="warn" (click)="emitAutoPlay()">Auto Play</button>
+    <button *ngIf="!autoBtn" mat-raised-button class="button" disabled color="warn" >Auto Play</button>
+
+    <button *ngIf="generateBtn" mat-raised-button class="button" (click)="emitGenerate()">Reset</button>
+    <button *ngIf="!generateBtn" mat-raised-button class="button" disabled >Reset</button>
+    
+</div>

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
+
 @Component({
   selector: 'app-block',
   templateUrl: './block.component.html',
@@ -7,7 +8,7 @@ import { AppService } from '../app.service';
 })
 export class BlockComponent implements OnInit {
   @Input() value: number | undefined;
-  @Input() index: number | undefined;
+  @Input() index: any;
   active: number = 0; 
   constructor(private appService: AppService) { }
   

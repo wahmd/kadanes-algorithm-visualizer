@@ -1,25 +1,22 @@
 
-<button mat-raised-button color="primary" (click)="populateRandomArray()">generate random</button>
-
 <app-array *ngIf="array" [array]="array"></app-array>
-
-
-
-<button *ngIf="current<8" mat-raised-button color="warn" (click)="increment()">next</button>
-<button *ngIf="current>=8" mat-raised-button disabled color="warn" (click)="increment()">next</button>
-
 <div class="section-2 container">
-    <div class="code">
+    <div class="code code-container">
         <div [ngClass]="{current: current === 1}" class="line" [innerHTML]="'maximumCurrent = nums[0]'"></div>
         <div [ngClass]="{current: current === 2}" class="line" [innerHTML]="'maximumGlobal = nums[0]'"></div>
         <div [ngClass]="{current: current === 3}" class="line" [innerHTML]="'for i equals 1 to i less than nums length do'"></div>
         <div class="indent">
-            <div [ngClass]="{current: current === 4}" class="line" [innerHTML]="'maxCurrent = Maximum between nums[i] And maximumCurrent + nums[i]'"></div>
-            <div [ngClass]="{current: current === 5}" class="line" [innerHTML]="'if maximumCurrent is less maximumGlobal '"></div>
+            <div [ngClass]="{current: current === 4}" class="line" [innerHTML]="'maximumCurrent = Maximum between nums[i] And maximumCurrent + nums[i]'"></div>
+            <div [ngClass]="{current: current === 5}" class="line" [innerHTML]="'if maximumCurrent is less than maximumGlobal '"></div>
             <div [ngClass]="{current: current === 6}" class="line indent" [innerHTML]="'maximumGlobal = maximumCurrent'"></div>
         </div>
-  
-        <div [ngClass]="{current: current === 7}" class="line" [innerHTML]="'return maxGlobal'"></div>
+        <div [ngClass]="{current: current === 7}" class="line" [innerHTML]="'return maximumGlobal'"></div>
     </div>
-    <app-display-panel class="display" [maxCurrent]="maxCurrent" [maxGlobal]="maxGlobal"></app-display-panel>
+    <app-display-panel class="display" 
+        (autoClicked)="autoPlay()" (nextClicked)="increment()" 
+        (generateClicked)="populateRandomArray()" [generateBtn]="generateBtn"
+        [autoBtn]="autoPlayBtn" [current]="current" [speed]="speed"
+        [maxCurrent]="maxCurrent" [maxGlobal]="maxGlobal" 
+        [nextBtn]="nextBtn" (speedUpdated)="updateSpeed($event)"> 
+    </app-display-panel>
 </div>
