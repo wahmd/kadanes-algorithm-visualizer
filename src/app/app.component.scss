@@ -1,0 +1,36 @@
+.container { 
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.nav-btn{
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 200;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    margin-right: 2rem;
+    padding: 0;
+    font-size: 1.5rem;
+    color: white;
+    background-color:#161819;
+    transition: background-color .5s;
+    transition: padding .5s;
+    transition: text-decoration .5s;
+}
+
+.nav-btn:hover {
+    background-color: white;
+    color: #161819;
+    padding: 0 2rem 0 0;
+    
+    // padding: 0 2rem;
+}
+
+.active {
+    text-decoration: overline wavy #f5e129;
+}
+
+.navbar{
+    margin: 3rem 0;
+}
