@@ -15,6 +15,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSliderModule } from '@angular/material/slider';
 import { RouterModule } from '@angular/router';
 import { ProblemComponent } from './problem/problem.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,9 @@ import { ProblemComponent } from './problem/problem.component';
     RouterModule.forRoot([
       { path: 'visualizer', component: BoardComponent },
       { path: 'problem', component: ProblemComponent },
-      { path: '', redirectTo: '/problem', pathMatch: 'full' }
+      { path: '', redirectTo: '/problem', pathMatch: 'full' },
     ]),
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

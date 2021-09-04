@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
+import { DeviceDetectorService } from 'ngx-device-detector';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-board',
@@ -17,8 +19,33 @@ export class BoardComponent implements OnInit {
   autoPlayBtn: boolean = true;
   generateBtn: boolean = true;
   speed: number = 500;
+  desktop: any = null;
 
-  constructor(public appService: AppService) {}
+  constructor(
+    public appService: AppService,
+    private deviceService: DeviceDetectorService,
+    private _snackBar: MatSnackBar
+  ) {
+    this.notDesktopAlert();
+  }
+
+  notDesktopAlert = () => {
+    this.desktop = this.deviceService.isDesktop();
+    const message = "I'd highly recommend you to experience visualizer on your computer.";
+    const action = 'Okay';
+    if (!this.desktop) {
+      this.openSnackBar(
+        message,
+        action
+      );
+    }
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      verticalPosition: 'top',
+    });
+  }
 
   ngOnInit(): void {
     this.populateRandomArray();
@@ -111,11 +138,10 @@ export class BoardComponent implements OnInit {
   };
 
   updateSpeed = (e: any) => {
-    // console.log('hallo')
     if (e && e.value !== this.speed) {
-      console.log('speed: ', this.speed)
+      console.log('speed: ', this.speed);
       this.speed = e.value;
     }
-  }
+  };
 }
 
