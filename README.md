@@ -1,5 +1,12 @@
 # KadaneAlgoVisualizer
 
+Step by step execution: 
+![step-by-step-execution](https://user-images.githubusercontent.com/74547936/132107315-5156dc77-54fe-4866-acb4-d13f693fe7e7.gif)
+
+Fast Autoplay Feature
+![p2](https://user-images.githubusercontent.com/74547936/132107331-48d7bdf5-be1c-47d8-82c2-3d6d5270b181.gif)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
 
 ## Development server
