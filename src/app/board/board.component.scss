@@ -2,21 +2,17 @@ body {
     margin: 0;
 }
 
-.container {
-    max-width: 80%;
-    margin: 0 auto;
-}
 
 .line {
-    // user-select: none; 
+    user-select: none; 
     margin: .5rem 0;
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 400;
 }
 .current {
     border-radius: .5rem;;
     padding: .5rem;
-    background-color: yellow;
+    background-color: #f5e129;
     font-weight: 500;
     font-size:1.5rem;
     color: #2c2c2c;
@@ -25,22 +21,20 @@ body {
 .section-2{
     display:flex;
     color: white;
+    flex-wrap: wrap;
     .code {
         flex: 2;
-        background: #2669e7;
         border-radius: 1.5rem;
     }
     .code-container{
-        padding: 2rem;
+        padding: 2rem 0; 
     }
     .display {
-        margin-left: 1rem;
-        padding: 2rem;
-        background: #2c2c2c;
-        border: 4px solid #2669e7;
-        border-radius: 1.5rem;
         flex: 1;
     }
+}
+.title {
+    margin-top: 0;
 }
 
 .indent{

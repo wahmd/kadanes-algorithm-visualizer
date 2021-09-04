@@ -5,6 +5,11 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  goToLink(url: string) {
+    window.open(url, '_blank');
+  }
+}
+

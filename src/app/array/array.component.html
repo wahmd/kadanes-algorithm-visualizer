@@ -1,7 +1,7 @@
 <div class="array">
     <div class="values-array">
         <span *ngFor="let val of array; let i=index">
-            <app-block [value]="val" [index]="i"></app-block>
+            <app-block [value]="val" [index]="i" [len]="array.length"> ></app-block>
         </span>
     </div>
 </div>  

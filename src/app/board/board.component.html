@@ -1,7 +1,8 @@
 
 <app-array *ngIf="array" [array]="array"></app-array>
-<div class="section-2 container">
+<div class="section-2">
     <div class="code code-container">
+        <h2 class="title">Kadane's algorithm steps</h2>
         <div [ngClass]="{current: current === 1}" class="line" [innerHTML]="'maximumCurrent = nums[0]'"></div>
         <div [ngClass]="{current: current === 2}" class="line" [innerHTML]="'maximumGlobal = nums[0]'"></div>
         <div [ngClass]="{current: current === 3}" class="line" [innerHTML]="'for i equals 1 to i less than nums length do'"></div>

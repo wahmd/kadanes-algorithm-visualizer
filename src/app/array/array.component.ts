@@ -6,7 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./array.component.scss']
 })
 export class ArrayComponent implements OnInit {
-  @Input() array: number[] | undefined;
+  @Input() array: number[] = [];
+  len: number = 0;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { AppService } from '../app.service';
 @Component({
   selector: 'app-display-panel',
   templateUrl: './display-panel.component.html',
@@ -17,14 +17,17 @@ export class DisplayPanelComponent implements OnInit {
   @Output() autoClicked = new EventEmitter();
   @Output() generateClicked = new EventEmitter();
   @Output() speedUpdated = new EventEmitter();
-
-  constructor() {}
+  currentIndex: number = 0;
+  constructor(private appService: AppService) {}
+  
   ngOnInit(): void {
+    this.appService.getI().subscribe((value) => {
+      this.currentIndex = value;
+    });
   }
 
   emitNextClicked = () => this.nextClicked.emit(true);
   emitAutoPlay = () => this.autoClicked.emit(true);
   emitGenerate = () => this.generateClicked.emit(true);
-  emitSpeedUpdate = (e:any) => this.speedUpdated.emit(e);
-
+  emitSpeedUpdate = (e: any) => this.speedUpdated.emit(e);
 }

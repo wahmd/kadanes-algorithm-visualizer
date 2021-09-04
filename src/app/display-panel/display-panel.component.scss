@@ -1,20 +1,24 @@
 .buttons{
     display:flex;
-    justify-content:stretch;
+    justify-content:space-between;
 }
 .button {
-    color: white;
-    background-color:#005eff;
+    flex-grow: 1;
+    color: black;
+    background-color:#F5E129;
     font-size: 1rem;
-    border-radius: .5rem;
+    border-radius: 1rem;
     padding: 1.2rem;
-    margin: .5rem 0.5rem 0 0;    
+    margin: .5rem 0 0 0;    
 }
 
 .number {
     font-weight: 500;
     font-size:2rem;
+    margin: 0;
+    transition: font-size .3s;
 }
+
 .box {
     border: 4px solid #005eff;
     border-radius: .5rem;
@@ -23,10 +27,59 @@
     transition: padding .5s;
 }
 
+
 .celebrate{
-    font-size: 1.5rem;
-    background-color: #00f521;
-    border: 4px solid #00ce1b;
-    padding: 2rem
+    font-weight: 500;
+    background-color: #00f521b0 !important;
+    padding: 2rem;
+    transition: background-color .5s;
 }
 
+.display-box {
+    flex-grow: 1;
+    background: #193144;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content:space-between;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+    transition: all 500ms ease;
+    transition-property: background, font-size;
+}
+.display-box:hover {
+    font-size: 1.2rem;
+    background: rgb(12,101,160);
+    background: linear-gradient(349deg, rgba(12,101,160,1) 0%, rgba(16,127,139,1) 100%);
+    .number {
+        font-size:2.5rem;
+    }
+}
+
+
+.margin {
+    margin-right: .5rem;
+}
+
+.display {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;    
+}
+
+.panel {
+    padding: .5rem;
+    background: #161819;;
+    border: 4px solid #2669e7;
+    border-radius: 1.5rem;
+}
+.label {
+    padding: 0;
+    margin-bottom: 0;   
+}
+.slider-box {
+    display: flex;
+}
+
+.slider {
+    min-width: 13rem;
+}
