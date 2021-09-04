@@ -23,7 +23,6 @@
     background-color: white;
     color: #161819;
     padding: 0 2rem 0 0;
-    
 }
 
 .active {
@@ -31,5 +30,14 @@
 }
 
 .navbar{
+    display: flex;
+    justify-content: space-between;
     margin-top: 3rem;
+} 
+
+.share {
+    text-decoration: none;
+    color: #f5e129;
+    font-weight: 600;
 }
+

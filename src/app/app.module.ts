@@ -16,6 +16,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { RouterModule } from '@angular/router';
 import { ProblemComponent } from './problem/problem.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MadeWithLoveComponent } from './made-with-love/made-with-love.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BlockComponent,
     DisplayPanelComponent,
     ProblemComponent,
+    MadeWithLoveComponent,
   ],
   imports: [
     BrowserModule,

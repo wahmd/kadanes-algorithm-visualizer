@@ -1,10 +1,13 @@
 
 <div class="container">
   <nav class="navbar">
-    <button class="nav-btn" routerLinkActive="active" routerLink="/problem">problem</button>
-    <button class="nav-btn" routerLinkActive="active" routerLink="/visualizer">visualizer</button>
+    <div>
+      <button class="nav-btn" routerLinkActive="active" routerLink="/problem">problem</button>
+      <button class="nav-btn" routerLinkActive="active" routerLink="/visualizer">visualizer</button>
+    </div>
+    <span> Like this project? <a class="share" href="https://github.com/wahmd/kadanes-algorithm-visualizer" target="_blank">share</a></span>
+
   </nav>
   <router-outlet></router-outlet>
+  <app-made-with-love></app-made-with-love>
 </div>
-
-<!-- <app-board></app-board> -->
