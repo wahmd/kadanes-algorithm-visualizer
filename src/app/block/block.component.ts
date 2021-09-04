@@ -9,11 +9,12 @@ import { AppService } from '../app.service';
 export class BlockComponent implements OnInit {
   @Input() value: number | undefined;
   @Input() index: any;
+  @Input() len: number = 0;
   active: number = 0; 
   constructor(private appService: AppService) { }
   
   ngOnInit(): void {
-    
+    console.log('console.',this.index, this.len)
     this.appService.getI().subscribe((value) => {
       this.active = value;
     });

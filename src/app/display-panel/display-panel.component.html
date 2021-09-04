@@ -1,17 +1,45 @@
-<div class="">
-    <h2 class="box" >Maximum Current <div class="number">{{maxCurrent}}</div></h2>
-    <h2 [ngClass]="{celebrate: !nextBtn && !autoBtn}" class="box">Maximum Global <div class="number">{{maxGlobal}}</div></h2>
-</div>
-
-<mat-slider min="1" max="2000" step="100" [value]="speed" (input)="emitSpeedUpdate($event)" ></mat-slider>
-<div class="buttons">
-    <button *ngIf="nextBtn" mat-raised-button class="button" color="warn" (click)="emitNextClicked()">Next</button>
-    <button *ngIf="!nextBtn" mat-raised-button class="button" disabled color="warn">Next</button>
+<div class="panel">
+    <div class="display">
+        <div class="display-box margin">
+            <div>
+                <div>Current</div>
+                <div>index</div>
+            </div>
+            <p class="number">{{currentIndex}}</p>
+        </div>
+        <div class="display-box ">
+            <div>
+                <div>Maximum</div>
+                <div>Current</div>
+            </div>
+            <p class="number">{{maxCurrent}}</p>
+        </div>
+    </div>
+    <div class="display" >
+        <div class="display-box" [ngClass]="{celebrate: !nextBtn && !autoBtn}" >
+            <p *ngIf="!nextBtn && !autoBtn; else global">Maximum Subarray Sum</p>
+            <ng-template #global>
+               <p> Maximum Global</p>
+            </ng-template>
+            <p class="number">{{maxGlobal}}</p>
+        </div>
+    </div>
     
-    <button *ngIf="autoBtn" mat-raised-button class="button" color="warn" (click)="emitAutoPlay()">Auto Play</button>
-    <button *ngIf="!autoBtn" mat-raised-button class="button" disabled color="warn" >Auto Play</button>
-
-    <button *ngIf="generateBtn" mat-raised-button class="button" (click)="emitGenerate()">Reset</button>
-    <button *ngIf="!generateBtn" mat-raised-button class="button" disabled >Reset</button>
+    <p class="label">Adjust autoplay speed</p>
+    <div class="slider-box">
+        <p class="label">fast</p>
+        <mat-slider class="slider" min="1" max="2000" step="100" [value]="speed" (input)="emitSpeedUpdate($event)" ></mat-slider>
+        <p class="label">slow</p>
+    </div>
+    <div class="buttons">
+        <button *ngIf="nextBtn" mat-raised-button class="button margin" color="warn" (click)="emitNextClicked()">Next</button>
+        <button *ngIf="!nextBtn" mat-raised-button class="button" disabled color="warn">Next</button>
+        
+        <button *ngIf="autoBtn" mat-raised-button class="button margin" color="warn" (click)="emitAutoPlay()">Auto Play</button>
+        <button *ngIf="!autoBtn" mat-raised-button class="button" disabled color="warn" >Auto Play</button>
     
+        <button *ngIf="generateBtn" mat-raised-button class="button" (click)="emitGenerate()">Reset</button>
+        <button *ngIf="!generateBtn" mat-raised-button class="button" disabled >Reset</button>
+        
+    </div>
 </div>

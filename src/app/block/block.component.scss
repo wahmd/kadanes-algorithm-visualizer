@@ -8,7 +8,6 @@ body{
     border: solid 10px rgb(31, 0, 80); 
 }
 
-
 .inline { 
     display: inline;
 }
@@ -21,24 +20,42 @@ body{
 .value {
     user-select: none; 
     flex: 50%;
-    border: solid 4px #d64e4b;
-    background: #ab4543;
-    margin: 0 .05rem;
-    font-size: 25px;
+    border: solid 4px white;
+    background: #299af5;
+    // margin: 0 .05rem;    
+    font-size: 2rem;
     padding: 2rem;
-    color: white;
-    transition: padding .4s;
+    color: #161819;
+    transition: all 500ms ease;
+    transition-property: font-size, padding;
+}
+
+:host {
+    ::ng-deep .mat-card {    
+        border-radius:0;
+    }
 }
 .value:hover {
-    font-size: 30px;
-    padding: 4rem;
-    cursor: pointer;
+    font-size: 3.5rem;
+    border: solid 6px white;
+    cursor: pointer
 }
 
-
 .active {
-    border: solid 4px #00f2ff;
-    background: #10a8b2;
-    font-size: 27px;
+    color:#161819;
+    border: solid 4px white;
+    background: white;
+    font-size: 3rem;
     padding: 2.5rem;
+}
+
+// array round edges
+.start{
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+
+.end{
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
 }

@@ -4,7 +4,7 @@
 <mat-card 
     *ngIf="value" class="value" 
     [matTooltip]="index"
-    [ngClass]="{active: active === index}"
+    [ngClass]="{active: active === index, start:index===0, end:index===len-1}"
     >
     {{value}}
 </mat-card>
